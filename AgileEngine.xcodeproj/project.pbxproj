@@ -13,9 +13,13 @@
 		553AF61A1DAE4DA000AC9FEA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 553AF6181DAE4DA000AC9FEA /* Main.storyboard */; };
 		553AF61C1DAE4DA000AC9FEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 553AF61B1DAE4DA000AC9FEA /* Assets.xcassets */; };
 		553AF61F1DAE4DA000AC9FEA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 553AF61D1DAE4DA000AC9FEA /* LaunchScreen.storyboard */; };
+		68C7498B37556F1098CB4546 /* libPods-AgileEngine.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 48F6F2A18DE07AC51B1FEE87 /* libPods-AgileEngine.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		01C27FF825AD6CD86F0488F2 /* Pods-AgileEngine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AgileEngine.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AgileEngine/Pods-AgileEngine.debug.xcconfig"; sourceTree = "<group>"; };
+		2EFE29EFE1997AC6017F2BCC /* Pods-AgileEngine.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AgileEngine.release.xcconfig"; path = "Pods/Target Support Files/Pods-AgileEngine/Pods-AgileEngine.release.xcconfig"; sourceTree = "<group>"; };
+		48F6F2A18DE07AC51B1FEE87 /* libPods-AgileEngine.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AgileEngine.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		553AF60C1DAE4DA000AC9FEA /* AgileEngine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AgileEngine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		553AF6101DAE4DA000AC9FEA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		553AF6121DAE4DA000AC9FEA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -33,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68C7498B37556F1098CB4546 /* libPods-AgileEngine.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +49,8 @@
 			children = (
 				553AF60E1DAE4DA000AC9FEA /* AgileEngine */,
 				553AF60D1DAE4DA000AC9FEA /* Products */,
+				8331CDE2541D14A90C0863C3 /* Pods */,
+				72B7C38598B1B78243869BC9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,6 +86,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		72B7C38598B1B78243869BC9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				48F6F2A18DE07AC51B1FEE87 /* libPods-AgileEngine.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8331CDE2541D14A90C0863C3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				01C27FF825AD6CD86F0488F2 /* Pods-AgileEngine.debug.xcconfig */,
+				2EFE29EFE1997AC6017F2BCC /* Pods-AgileEngine.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -86,9 +110,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 553AF6231DAE4DA000AC9FEA /* Build configuration list for PBXNativeTarget "AgileEngine" */;
 			buildPhases = (
+				8CD91A2C937CA92F7F103D11 /* [CP] Check Pods Manifest.lock */,
 				553AF6081DAE4DA000AC9FEA /* Sources */,
 				553AF6091DAE4DA000AC9FEA /* Frameworks */,
 				553AF60A1DAE4DA000AC9FEA /* Resources */,
+				D1FC31C9FD445D3B89340A1C /* [CP] Embed Pods Frameworks */,
+				B6A2BEB59C612B103C1A994D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -110,6 +137,7 @@
 				TargetAttributes = {
 					553AF60B1DAE4DA000AC9FEA = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 2PJDMH28HK;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -144,6 +172,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8CD91A2C937CA92F7F103D11 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B6A2BEB59C612B103C1A994D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AgileEngine/Pods-AgileEngine-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D1FC31C9FD445D3B89340A1C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AgileEngine/Pods-AgileEngine-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		553AF6081DAE4DA000AC9FEA /* Sources */ = {
@@ -270,9 +346,12 @@
 		};
 		553AF6241DAE4DA000AC9FEA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 01C27FF825AD6CD86F0488F2 /* Pods-AgileEngine.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2PJDMH28HK;
 				INFOPLIST_FILE = AgileEngine/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = realty.AgileEngine;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -281,9 +360,12 @@
 		};
 		553AF6251DAE4DA000AC9FEA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2EFE29EFE1997AC6017F2BCC /* Pods-AgileEngine.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2PJDMH28HK;
 				INFOPLIST_FILE = AgileEngine/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = realty.AgileEngine;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -309,6 +391,7 @@
 				553AF6251DAE4DA000AC9FEA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
