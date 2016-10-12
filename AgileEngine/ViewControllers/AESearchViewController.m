@@ -32,13 +32,12 @@ static NSString * const keySegueShowGallery = @"SegueShowGallery";
 
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
     if ([segue.identifier isEqualToString:keySegueShowGallery]){
         
         AEGalleryViewController *vc = segue.destinationViewController;
-        vc.searchTag = self.searchTextField.text;
+        vc.searchTag = sender;
     }
 }
 
@@ -60,12 +59,15 @@ static NSString * const keySegueShowGallery = @"SegueShowGallery";
 - (IBAction)tapSearchButton:(id)sender {
     
     [self.searchTextField resignFirstResponder];
+    
+    NSString *text = self.searchTextField.text;
+    text = [text stringByReplacingOccurrencesOfString:@" " withString:@""];
 
-    if (self.searchTextField.text.length > 0) {
-
+    if (text.length > 0) {
+        
+        [self performSegueWithIdentifier:keySegueShowGallery sender:text];
+        
         self.searchTextField.text = @"";
-
-        [self performSegueWithIdentifier:keySegueShowGallery sender:self];
     }
 }
 

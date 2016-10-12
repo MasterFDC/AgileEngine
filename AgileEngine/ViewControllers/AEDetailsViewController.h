@@ -10,4 +10,6 @@
 
 @interface AEDetailsViewController : UIViewController
 
+@property (nonatomic) NSInteger photoIndex;
+
 @end

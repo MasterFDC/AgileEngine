@@ -10,6 +10,8 @@
 		550E61701DAE52CA00712407 /* AESearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 550E616F1DAE52CA00712407 /* AESearchViewController.m */; };
 		550E61731DAE52DB00712407 /* AEDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 550E61721DAE52DB00712407 /* AEDetailsViewController.m */; };
 		550E61761DAE52F300712407 /* AEGalleryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 550E61751DAE52F300712407 /* AEGalleryViewController.m */; };
+		550E61791DAE56E500712407 /* AEFlickrManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 550E61781DAE56E500712407 /* AEFlickrManager.m */; };
+		550E617C1DAE59EF00712407 /* AENetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 550E617B1DAE59EF00712407 /* AENetworkManager.m */; };
 		553AF6111DAE4DA000AC9FEA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 553AF6101DAE4DA000AC9FEA /* main.m */; };
 		553AF6141DAE4DA000AC9FEA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 553AF6131DAE4DA000AC9FEA /* AppDelegate.m */; };
 		553AF61A1DAE4DA000AC9FEA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 553AF6181DAE4DA000AC9FEA /* Main.storyboard */; };
@@ -28,6 +30,10 @@
 		550E61721DAE52DB00712407 /* AEDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AEDetailsViewController.m; sourceTree = "<group>"; };
 		550E61741DAE52F300712407 /* AEGalleryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AEGalleryViewController.h; sourceTree = "<group>"; };
 		550E61751DAE52F300712407 /* AEGalleryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AEGalleryViewController.m; sourceTree = "<group>"; };
+		550E61771DAE56E500712407 /* AEFlickrManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AEFlickrManager.h; sourceTree = "<group>"; };
+		550E61781DAE56E500712407 /* AEFlickrManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AEFlickrManager.m; sourceTree = "<group>"; };
+		550E617A1DAE59EF00712407 /* AENetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AENetworkManager.h; sourceTree = "<group>"; };
+		550E617B1DAE59EF00712407 /* AENetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AENetworkManager.m; sourceTree = "<group>"; };
 		553AF60C1DAE4DA000AC9FEA /* AgileEngine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AgileEngine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		553AF6101DAE4DA000AC9FEA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		553AF6121DAE4DA000AC9FEA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -53,6 +59,10 @@
 		550E616C1DAE52B300712407 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				550E61771DAE56E500712407 /* AEFlickrManager.h */,
+				550E61781DAE56E500712407 /* AEFlickrManager.m */,
+				550E617A1DAE59EF00712407 /* AENetworkManager.h */,
+				550E617B1DAE59EF00712407 /* AENetworkManager.m */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -254,9 +264,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				553AF6141DAE4DA000AC9FEA /* AppDelegate.m in Sources */,
+				550E617C1DAE59EF00712407 /* AENetworkManager.m in Sources */,
 				553AF6111DAE4DA000AC9FEA /* main.m in Sources */,
 				550E61761DAE52F300712407 /* AEGalleryViewController.m in Sources */,
 				550E61701DAE52CA00712407 /* AESearchViewController.m in Sources */,
+				550E61791DAE56E500712407 /* AEFlickrManager.m in Sources */,
 				550E61731DAE52DB00712407 /* AEDetailsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
