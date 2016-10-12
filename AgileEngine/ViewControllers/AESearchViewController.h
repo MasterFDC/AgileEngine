@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  AESearchViewController.h
 //  AgileEngine
 //
 //  Created by Tymur Tkachenko on 10/12/16.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface AESearchViewController : UIViewController
 
 @end
-
